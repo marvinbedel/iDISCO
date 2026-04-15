@@ -1,0 +1,395 @@
+{
+    "f42196f8-af29-400a-8cc4-6047c35ef565": {
+        "name": "[1-10aprile]",
+        "color": "\ud83d\udfe2",
+        "tasks": [
+            {
+                "id": "f9b0fca5-502a-4409-9c4c-158de5e4763e",
+                "name": "Dehydration MeOH & 66% DCM o.n.",
+                "date": "2026-04-07"
+            },
+            {
+                "id": "e44e0b79-1ae5-47d7-be84-fce27667b0c7",
+                "name": "Wash MeOH & Bleaching H2O2 o.n.",
+                "date": "2026-04-08"
+            },
+            {
+                "id": "0b718e50-e7b7-4cce-8334-b5e10cb41758",
+                "name": "Wash PBST & Permeabilization o.n.",
+                "date": "2026-04-09"
+            },
+            {
+                "id": "363a8253-f577-4c63-b3c6-645b23258e64",
+                "name": "Blocking o.n.",
+                "date": "2026-04-10"
+            },
+            {
+                "id": "c91b4e03-554c-4d54-b4de-544913509975",
+                "name": "Antibody I - Giorno 1/10",
+                "date": "2026-04-11"
+            },
+            {
+                "id": "6c7a1bdd-47eb-4b86-a6aa-3afc31a7eeb1",
+                "name": "Antibody I - Giorno 2/10",
+                "date": "2026-04-12"
+            },
+            {
+                "id": "72467135-e1fb-469f-8413-664f9415de27",
+                "name": "Antibody I - Giorno 3/10",
+                "date": "2026-04-13"
+            },
+            {
+                "id": "6f5616c9-ba17-4696-bc61-6677a69280aa",
+                "name": "Antibody I - Giorno 4/10",
+                "date": "2026-04-14"
+            },
+            {
+                "id": "284a45c6-23e0-46e5-9de2-1f80730fd433",
+                "name": "Antibody I - Giorno 5/10",
+                "date": "2026-04-15"
+            },
+            {
+                "id": "1a2d7a8c-2988-4966-9748-6c25307f9ef8",
+                "name": "Antibody I - Giorno 6/10",
+                "date": "2026-04-16"
+            },
+            {
+                "id": "9dbea6ae-6460-4e16-b177-35ddfefc4258",
+                "name": "Antibody I - Giorno 7/10",
+                "date": "2026-04-17"
+            },
+            {
+                "id": "6bbe7e82-cae1-4755-a4c8-a476a816d0bc",
+                "name": "Antibody I - Giorno 8/10",
+                "date": "2026-04-18"
+            },
+            {
+                "id": "e9705d60-225a-4e94-a97d-9771b2524fa9",
+                "name": "Antibody I - Giorno 9/10",
+                "date": "2026-04-19"
+            },
+            {
+                "id": "90cb7e6e-6032-43d5-bff0-d035322c73d2",
+                "name": "Antibody I - Giorno 10/10",
+                "date": "2026-04-20"
+            },
+            {
+                "id": "67dce233-338a-4df0-8c10-d26ee1ded01c",
+                "name": "Wash PBSTwHep o.n.",
+                "date": "2026-04-21"
+            },
+            {
+                "id": "bc94a20e-6b90-453f-9ab4-7ffb0ce084f1",
+                "name": "Antibody II - Giorno 1/7",
+                "date": "2026-04-22"
+            },
+            {
+                "id": "68f1a12c-ce99-4d0b-abcb-9f5afa5cd4c3",
+                "name": "Antibody II - Giorno 2/7",
+                "date": "2026-04-23"
+            },
+            {
+                "id": "8c040851-615d-4e3c-9d95-46cb487ff568",
+                "name": "Antibody II - Giorno 3/7",
+                "date": "2026-04-24"
+            },
+            {
+                "id": "60f121a9-d8e7-4d02-ad63-769077cb04ba",
+                "name": "Antibody II - Giorno 4/7",
+                "date": "2026-04-25"
+            },
+            {
+                "id": "d761ba0f-f717-4ffa-9b4a-0c2978a4a894",
+                "name": "Antibody II - Giorno 5/7",
+                "date": "2026-04-26"
+            },
+            {
+                "id": "31383036-c162-45a6-b25b-3c328fcf0e80",
+                "name": "Antibody II - Giorno 6/7",
+                "date": "2026-04-27"
+            },
+            {
+                "id": "fb784b52-5196-40ac-9304-773c31211f2b",
+                "name": "Antibody II - Giorno 7/7",
+                "date": "2026-04-28"
+            },
+            {
+                "id": "201ff77a-75ec-453a-82bd-b87673c7a6b7",
+                "name": "Wash PBSTwHep o.n.",
+                "date": "2026-04-29"
+            },
+            {
+                "id": "28c7ba35-60a6-4798-893d-de8cb7fc2642",
+                "name": "Dehydration, DCM, RI matching (DBE)",
+                "date": "2026-04-30"
+            },
+            {
+                "id": "fd75e7df-48dc-41a8-819b-36d41e3363d8",
+                "name": "FINE PROTOCOLLO",
+                "date": "2026-05-01"
+            }
+        ]
+    },
+    "1220126e-5238-40f1-9e6e-e786f968b30a": {
+        "name": "test h2o2[5-8]",
+        "color": "\ud83d\udd35",
+        "tasks": [
+            {
+                "id": "7f1c0899-96b5-4f06-81f5-a406985f49f3",
+                "name": "Dehydration MeOH & 66% DCM o.n.",
+                "date": "2026-03-30"
+            },
+            {
+                "id": "4adbd526-6bcd-4b16-9eeb-bce267905514",
+                "name": "Wash MeOH & Bleaching H2O2 o.n.",
+                "date": "2026-03-31"
+            },
+            {
+                "id": "5d7b312e-9bea-48b6-9465-43344018a6d3",
+                "name": "Wash PBST & Permeabilization o.n.",
+                "date": "2026-04-01"
+            },
+            {
+                "id": "69de0d27-b1c6-4994-8854-3c7459ad4cc4",
+                "name": "Blocking o.n.",
+                "date": "2026-04-02"
+            },
+            {
+                "id": "4565889f-bd13-4da7-af46-65782675839a",
+                "name": "Antibody I - Giorno 1/10",
+                "date": "2026-04-03"
+            },
+            {
+                "id": "8c90ed24-a237-4cfb-859d-d592d5ad5d05",
+                "name": "Antibody I - Giorno 2/10",
+                "date": "2026-04-04"
+            },
+            {
+                "id": "42cee34e-7c30-4912-b98b-4f59b92f7a3f",
+                "name": "Antibody I - Giorno 3/10",
+                "date": "2026-04-05"
+            },
+            {
+                "id": "21018305-7138-4bc2-ba1e-0bc9cd1b6bed",
+                "name": "Antibody I - Giorno 4/10",
+                "date": "2026-04-06"
+            },
+            {
+                "id": "090c3092-76c0-494a-aa2a-e6591bb972d5",
+                "name": "Antibody I - Giorno 5/10",
+                "date": "2026-04-07"
+            },
+            {
+                "id": "2fc3dab1-1fc8-4e0c-a2e9-3f7c7f17d316",
+                "name": "Antibody I - Giorno 6/10",
+                "date": "2026-04-08"
+            },
+            {
+                "id": "18d3305b-4d02-4d90-8f6a-a4c557eaf517",
+                "name": "Antibody I - Giorno 7/10",
+                "date": "2026-04-09"
+            },
+            {
+                "id": "36f377bf-4add-49af-83f8-d144979b9364",
+                "name": "Antibody I - Giorno 8/10",
+                "date": "2026-04-10"
+            },
+            {
+                "id": "b499264b-0abe-4fbc-88bc-5f0fc8afb8c7",
+                "name": "Antibody I - Giorno 9/10",
+                "date": "2026-04-11"
+            },
+            {
+                "id": "d35161f1-db18-4efd-a53c-d48ace61def8",
+                "name": "Antibody I - Giorno 10/10",
+                "date": "2026-04-12"
+            },
+            {
+                "id": "d6fbfe61-40cb-441d-9462-4fd1e3de423a",
+                "name": "Wash PBSTwHep o.n.",
+                "date": "2026-04-13"
+            },
+            {
+                "id": "befd9f7d-e121-461b-aa1a-017325ae2b0f",
+                "name": "Antibody II - Giorno 1/7",
+                "date": "2026-04-14"
+            },
+            {
+                "id": "67b49f26-5f95-461c-9de0-99dbd626c18a",
+                "name": "Antibody II - Giorno 2/7",
+                "date": "2026-04-15"
+            },
+            {
+                "id": "7484cf25-c2d7-4003-a9c3-dea425ce7b90",
+                "name": "Antibody II - Giorno 3/7",
+                "date": "2026-04-16"
+            },
+            {
+                "id": "3a29b859-c7db-48aa-b4cf-72a085490295",
+                "name": "Antibody II - Giorno 4/7",
+                "date": "2026-04-17"
+            },
+            {
+                "id": "1cdfec63-e00d-46ac-8f3a-096cdd33c4b5",
+                "name": "Antibody II - Giorno 5/7",
+                "date": "2026-04-18"
+            },
+            {
+                "id": "86a5a7dd-e1a4-44e2-8c2c-c43fb701eb9d",
+                "name": "Antibody II - Giorno 6/7",
+                "date": "2026-04-19"
+            },
+            {
+                "id": "732ac608-0041-4d56-acf9-35fb5d8a2deb",
+                "name": "Antibody II - Giorno 7/7",
+                "date": "2026-04-20"
+            },
+            {
+                "id": "98bfa708-5c9e-49ef-b3bb-cf6d745eb25b",
+                "name": "Wash PBSTwHep o.n.",
+                "date": "2026-04-21"
+            },
+            {
+                "id": "1ce35686-8d5f-4b67-9d37-f3204a1cb191",
+                "name": "Dehydration, DCM, RI matching (DBE)",
+                "date": "2026-04-22"
+            },
+            {
+                "id": "834f7da8-a712-4652-ba07-baefd7bafb92",
+                "name": "FINE PROTOCOLLO",
+                "date": "2026-04-23"
+            }
+        ]
+    },
+    "eebec80c-c5a0-4491-ac86-329a3118cbcc": {
+        "name": "test IDH1 [9,10,11,12,14]",
+        "color": "\ud83d\udc7e",
+        "tasks": [
+            {
+                "id": "8609420d-16d5-464d-a7cc-09a75fa8e85c",
+                "name": "Dehydration MeOH & 66% DCM o.n.",
+                "date": "2026-03-30"
+            },
+            {
+                "id": "9014807c-5418-4c69-9f49-11cf73b23f17",
+                "name": "Wash MeOH & Bleaching H2O2 o.n.",
+                "date": "2026-03-31"
+            },
+            {
+                "id": "5a43a640-9012-468a-ac19-4b2e52da0c39",
+                "name": "Wash PBST & Permeabilization o.n.",
+                "date": "2026-04-01"
+            },
+            {
+                "id": "1ce27cb1-0f4f-45cb-80c7-b887355c0e6d",
+                "name": "Blocking o.n.",
+                "date": "2026-04-02"
+            },
+            {
+                "id": "b060856b-1cac-4d33-b2b1-4431e69bbc27",
+                "name": "Antibody I - Giorno 1/10",
+                "date": "2026-04-03"
+            },
+            {
+                "id": "c9953642-86de-44b5-8b17-c83aee16237f",
+                "name": "Antibody I - Giorno 2/10",
+                "date": "2026-04-04"
+            },
+            {
+                "id": "8269182a-d8d9-47a4-9433-cf6fc7634daa",
+                "name": "Antibody I - Giorno 3/10",
+                "date": "2026-04-05"
+            },
+            {
+                "id": "2856ec13-8d76-4270-b8cc-78444abab08f",
+                "name": "Antibody I - Giorno 4/10",
+                "date": "2026-04-06"
+            },
+            {
+                "id": "1a216a97-9228-42d2-9564-5545f5a3c0e2",
+                "name": "Antibody I - Giorno 5/10",
+                "date": "2026-04-07"
+            },
+            {
+                "id": "7a45f991-066a-4df4-bc84-2aca316b7f6a",
+                "name": "Antibody I - Giorno 6/10",
+                "date": "2026-04-08"
+            },
+            {
+                "id": "d7a27207-dd8d-4109-90d6-badab304e868",
+                "name": "Antibody I - Giorno 7/10",
+                "date": "2026-04-09"
+            },
+            {
+                "id": "be06874b-abad-4337-af6b-c6ff048cf547",
+                "name": "Antibody I - Giorno 8/10",
+                "date": "2026-04-10"
+            },
+            {
+                "id": "9e647d4d-78d5-4399-b1f5-45eb0a0114d9",
+                "name": "Antibody I - Giorno 9/10",
+                "date": "2026-04-11"
+            },
+            {
+                "id": "37ad68a1-7c76-4d91-94a0-45d19221824d",
+                "name": "Antibody I - Giorno 10/10",
+                "date": "2026-04-12"
+            },
+            {
+                "id": "91970f92-be8f-4c04-b71b-25a17ae38592",
+                "name": "Wash PBSTwHep o.n.",
+                "date": "2026-04-13"
+            },
+            {
+                "id": "08f1f23e-075c-45ac-9f15-8376c83ee4bc",
+                "name": "Antibody II - Giorno 1/7",
+                "date": "2026-04-14"
+            },
+            {
+                "id": "743b94e0-a2a9-44a0-808b-a72f06dafe4a",
+                "name": "Antibody II - Giorno 2/7",
+                "date": "2026-04-15"
+            },
+            {
+                "id": "9d1197d8-b275-47d2-b323-8f4e148327f0",
+                "name": "Antibody II - Giorno 3/7",
+                "date": "2026-04-16"
+            },
+            {
+                "id": "641d73fa-fcac-4f41-943d-16ef4a91a979",
+                "name": "Antibody II - Giorno 4/7",
+                "date": "2026-04-17"
+            },
+            {
+                "id": "18608671-cc85-4ccb-b203-8b6a308e72e2",
+                "name": "Antibody II - Giorno 5/7",
+                "date": "2026-04-18"
+            },
+            {
+                "id": "a687c367-f036-48e3-834b-f73c64eb853e",
+                "name": "Antibody II - Giorno 6/7",
+                "date": "2026-04-19"
+            },
+            {
+                "id": "3493fb2c-ef07-47e7-91f7-f8798da75206",
+                "name": "Antibody II - Giorno 7/7",
+                "date": "2026-04-20"
+            },
+            {
+                "id": "3cc18824-b195-419c-b019-291e502a2c05",
+                "name": "Wash PBSTwHep o.n.",
+                "date": "2026-04-21"
+            },
+            {
+                "id": "b81a2dd4-61d2-4295-afd7-1792700811e2",
+                "name": "Dehydration, DCM, RI matching (DBE)",
+                "date": "2026-04-22"
+            },
+            {
+                "id": "1f88695a-66d2-4bee-b0ad-120768a65598",
+                "name": "FINE PROTOCOLLO",
+                "date": "2026-04-23"
+            }
+        ]
+    }
+}
