@@ -143,6 +143,29 @@ def main():
                     save_data(st.session_state.data)
                     st.success(f"Step '{new_step_name}' aggiunto e date successive slittate.")
                     st.rerun()
+                    
+        # Rimuovi Step
+        with st.sidebar.expander("➖ Rimuovi Step", expanded=False):
+            exp_to_rem = st.selectbox("Da quale esperimento?", options=[e[1] for e in exp_list], key="rem_step_exp")
+            exp_id_to_rem = next((e[0] for e in exp_list if e[1] == exp_to_rem), None)
+            
+            if exp_id_to_rem:
+                tasks = st.session_state.data[exp_id_to_rem]['tasks']
+                task_names = [f"{datetime.strptime(t['date'], '%Y-%m-%d').strftime('%d/%m')} - {t['name']}" for t in tasks if "FINE" not in t['name']]
+                
+                if task_names:
+                    task_to_rem_name = st.selectbox("Quale step eliminare?", options=task_names, key="rem_step_task")
+                    task_idx_to_rem = task_names.index(task_to_rem_name)
+                    
+                    if st.button("Elimina e Anticipa Date", key="rem_step_btn"):
+                        tasks.pop(task_idx_to_rem) 
+                        for i in range(task_idx_to_rem, len(tasks)):
+                            v_data = datetime.strptime(tasks[i]['date'], "%Y-%m-%d")
+                            tasks[i]['date'] = (v_data - timedelta(days=1)).strftime("%Y-%m-%d")
+                            
+                        save_data(st.session_state.data)
+                        st.warning("Step rimosso e date anticipate di 1 giorno!")
+                        st.rerun()
 
         # Pausa / Slitta
         with st.sidebar.expander("⏸️ Pausa / Slitta Date", expanded=False):
