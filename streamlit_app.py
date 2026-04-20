@@ -38,7 +38,7 @@ def generate_protocol(start_date, ab1_days, ab2_days):
         current_date += timedelta(days=days_duration)
 
     add_task("Dehydration MeOH & 66% DCM o.n.", 1)
-    add_task("Wash MeOH & Bleaching H2O2 o.n.", 1)
+    add_task("Wash MeOH, Rehydration & Bleaching H2O2 o.n.", 1)
     add_task("Wash PBST & Permeabilization o.n.", 1)
     add_task("Blocking o.n.", 1)
     
@@ -51,8 +51,7 @@ def generate_protocol(start_date, ab1_days, ab2_days):
         add_task(f"Antibody II - Giorno {i+1}/{ab2_days}", 1)
         
     add_task("Wash PBSTwHep o.n.", 1)
-    add_task("Dehydration, DCM, RI matching (DBE)", 1)
-    add_task("FINE PROTOCOLLO", 0)
+    add_task("Dehydration, DCM, RI matching (DBE) - FINE PROTOCOLLO", 1)
     
     return tasks
 
@@ -175,7 +174,7 @@ def main():
             if exp_id_to_pause:
                 tasks = st.session_state.data[exp_id_to_pause]['tasks']
                 task_names = [f"{datetime.strptime(t['date'], '%Y-%m-%d').strftime('%d/%m')} - {t['name']}" for t in tasks]
-                start_task_name = st.selectbox("Da quale step in poi?", options=task_names, key="pause_start_task")
+                start_task_name = st.selectbox("Prima di quale step", options=task_names, key="pause_start_task")
                 start_task_idx = task_names.index(start_task_name)
                 
                 pause_days = st.number_input("Giorni di stop", min_value=1, value=1, key="pause_days")
