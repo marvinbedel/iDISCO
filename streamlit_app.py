@@ -71,19 +71,36 @@ def main():
     st.sidebar.header("Pannello Controllo")
     
     # Nuovo Esperimento
+    # 1. Nuovo Esperimento
     with st.sidebar.expander("🟢 Nuovo Esperimento", expanded=False):
         exp_name = st.text_input("Nome Esperimento", key="new_exp_name")
         exp_color = st.text_input("Colore/Emoji (es. B, R, 🟢)", value="🔵", key="new_exp_color")
         start_date = st.date_input("Data Inizio", datetime.today(), key="new_exp_start")
+        
         ab1_days = st.number_input("Giorni Ab I", min_value=1, value=3, key="new_exp_ab1")
         ab1_info = st.text_input("Dettagli Ab I (es. Anti-NeuN 1:500)", key="new_exp_ab1_info")
+        
         ab2_days = st.number_input("Giorni Ab II", min_value=1, value=3, key="new_exp_ab2")
         ab2_info = st.text_input("Dettagli Ab II (es. Dk anti-Ms 1:1000)", key="new_exp_ab2_info")
-
+        
+        st.write("⚙️ Fasi Standard (Rimuovi le X per saltare uno step):")
+        opzioni_fasi = [
+            "Dehydration MeOH & 66% DCM",
+            "Wash MeOH & Bleaching H2O2",
+            "Wash PBST & Permeabilization",
+            "Blocking",
+            "Wash PBSTwHep (Post-Ab1)",
+            "Wash PBSTwHep (Post-Ab2)",
+            "Dehydration, DCM, RI matching (DBE)"
+        ]
+        fasi_scelte = st.multiselect("Step inclusi:", options=opzioni_fasi, default=opzioni_fasi, label_visibility="collapsed")
+        
         if st.button("Crea Protocollo"):
             if exp_name:
                 exp_id = str(uuid.uuid4())
                 start_datetime = datetime.combine(start_date, datetime.min.time())
+                
+                # Ora fasi_scelte e le info degli anticorpi sono definite correttamente prima di chiamare la funzione
                 tasks = generate_protocol(start_datetime, ab1_days, ab2_days, fasi_scelte, ab1_info, ab2_info)
                 
                 st.session_state.data[exp_id] = {
@@ -92,7 +109,7 @@ def main():
                     "tasks": tasks
                 }
                 save_data(st.session_state.data)
-                st.success(f"Protocollo per {exp_name} creato!")
+                st.success("Protocollo creato!")
                 st.rerun()
             else:
                 st.error("Inserisci un nome per l'esperimento.")
