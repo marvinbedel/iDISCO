@@ -23,36 +23,37 @@ def save_data(data):
         json.dump(data, f, indent=4)
 
 # --- LOGICA DEL PROTOCOLLO ---
-def generate_protocol(start_date, ab1_days, ab2_days):
-    """Genera la lista dei task standard in base alla data di inizio."""
+def generate_protocol(start_date, ab1_days, ab2_days, fasi_scelte=None, ab1_info="", ab2_info=""):
+    if fasi_scelte is None:
+        fasi_scelte = ["Dehydration MeOH & 66% DCM", "Wash MeOH & Bleaching H2O2", "Wash PBST & Permeabilization", "Blocking", "Wash PBSTwHep (Post-Ab1)", "Wash PBSTwHep (Post-Ab2)", "Dehydration, DCM, RI matching (DBE)"]
+        
     tasks = []
     current_date = start_date
     
     def add_task(name, days_duration):
         nonlocal current_date
-        tasks.append({
-            "id": str(uuid.uuid4()),
-            "name": name,
-            "date": current_date.strftime("%Y-%m-%d")
-        })
+        tasks.append({"id": str(uuid.uuid4()), "name": name, "date": current_date.strftime("%Y-%m-%d")})
         current_date += timedelta(days=days_duration)
 
-    add_task("Dehydration MeOH & 66% DCM o.n.", 1)
-    add_task("Wash MeOH, Rehydration & Bleaching H2O2 o.n.", 1)
-    add_task("Wash PBST & Permeabilization o.n.", 1)
-    add_task("Blocking o.n.", 1)
+    if "Dehydration MeOH & 66% DCM" in fasi_scelte: add_task("Dehydration MeOH & 66% DCM o.n.", 1)
+    if "Wash MeOH & Bleaching H2O2" in fasi_scelte: add_task("Wash MeOH, Rehydration & Bleaching H2O2 o.n.", 1)
+    if "Wash PBST & Permeabilization" in fasi_scelte: add_task("Wash PBST & Permeabilization o.n.", 1)
+    if "Blocking" in fasi_scelte: add_task("Blocking o.n.", 1)
     
-    for i in range(ab1_days):
-        add_task(f"Antibody I - Giorno {i+1}/{ab1_days}", 1)
-        
-    add_task("Wash PBSTwHep o.n.", 1)
+    # Formattazione per gli anticorpi
+    ab1_suffix = f" ({ab1_info})" if ab1_info.strip() else ""
+    for i in range(ab1_days): add_task(f"Antibody I{ab1_suffix} - Giorno {i+1}/{ab1_days}", 1)
     
-    for i in range(ab2_days):
-        add_task(f"Antibody II - Giorno {i+1}/{ab2_days}", 1)
-        
-    add_task("Wash PBSTwHep o.n.", 1)
-    add_task("Dehydration, DCM, RI matching (DBE) - FINE PROTOCOLLO", 1)
+    if "Wash PBSTwHep (Post-Ab1)" in fasi_scelte: add_task("Wash PBSTwHep o.n.", 1)
     
+    # Formattazione per gli anticorpi
+    ab2_suffix = f" ({ab2_info})" if ab2_info.strip() else ""
+    for i in range(ab2_days): add_task(f"Antibody II{ab2_suffix} - Giorno {i+1}/{ab2_days}", 1)
+    
+    if "Wash PBSTwHep (Post-Ab2)" in fasi_scelte: add_task("Wash PBSTwHep o.n.", 1)
+    if "Dehydration, DCM, RI matching (DBE)" in fasi_scelte: add_task("Dehydration, DCM, RI matching (DBE) + FINE", 1)
+    
+    add_task("FINE PROTOCOLLO", 0)
     return tasks
 
 # --- FUNZIONI DI SUPPORTO ---
@@ -75,13 +76,15 @@ def main():
         exp_color = st.text_input("Colore/Emoji (es. B, R, 🟢)", value="🔵", key="new_exp_color")
         start_date = st.date_input("Data Inizio", datetime.today(), key="new_exp_start")
         ab1_days = st.number_input("Giorni Ab I", min_value=1, value=3, key="new_exp_ab1")
+        ab1_info = st.text_input("Dettagli Ab I (es. Anti-NeuN 1:500)", key="new_exp_ab1_info")
         ab2_days = st.number_input("Giorni Ab II", min_value=1, value=3, key="new_exp_ab2")
-        
+        ab2_info = st.text_input("Dettagli Ab II (es. Dk anti-Ms 1:1000)", key="new_exp_ab2_info")
+
         if st.button("Crea Protocollo"):
             if exp_name:
                 exp_id = str(uuid.uuid4())
                 start_datetime = datetime.combine(start_date, datetime.min.time())
-                tasks = generate_protocol(start_datetime, ab1_days, ab2_days)
+                tasks = generate_protocol(start_datetime, ab1_days, ab2_days, fasi_scelte, ab1_info, ab2_info)
                 
                 st.session_state.data[exp_id] = {
                     "name": exp_name,
